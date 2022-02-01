@@ -1,13 +1,19 @@
 import java.io.*;
 import java.util.Arrays;
 
+import javax.swing.JFileChooser;
+
 public class ReadCSV{
 	String line="";
 	String[] letters = new String[2];
 	public static void main(String[] args) {
 		BufferedReader br = null;
 		try {
-		    br = new BufferedReader(new FileReader("D:\\2021-2022\\CS-4273\\LetterGame\\src\\test.csv"));
+		    JFileChooser chooser = new JFileChooser();
+			chooser.setDialogType(JFileChooser.OPEN_DIALOG);
+			int returnVal = chooser.showOpenDialog(chooser);
+			if (returnVal == JFileChooser.APPROVE_OPTION) {
+				br = new BufferedReader(new FileReader(chooser.getSelectedFile()));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
