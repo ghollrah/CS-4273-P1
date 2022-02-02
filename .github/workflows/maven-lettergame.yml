@@ -25,8 +25,8 @@ jobs:
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots verify
     - name: Compile ReadCSV.java
-      run: javac /home/runner/work/CS-4273-P1/ReadCSV.java
+      run: javac /home/runner/work/CS-4273-P1/CS-4273-P1/ReadCSV.java
     - name: Run ReadCSV
-      run: java /home/runner/work/CS-4273-P1/ReadCSV
+      run: java /home/runner/work/CS-4273-P1/CS-4273-P1/ReadCSV
 
 
