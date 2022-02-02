@@ -9,12 +9,13 @@ public class ReadCSV{
 	public static void main(String[] args) {
 		BufferedReader br = null;
 		try {
-		    JFileChooser chooser = new JFileChooser();
+		    /*JFileChooser chooser = new JFileChooser();
 			chooser.setDialogType(JFileChooser.OPEN_DIALOG);
 			int returnVal = chooser.showOpenDialog(chooser);
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				br = new BufferedReader(new FileReader(chooser.getSelectedFile()));
-			}
+			}*/
+			br = new BufferedReader(new FileReader(String.valueOf(args[1]));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
