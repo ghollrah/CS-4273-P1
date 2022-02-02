@@ -14,6 +14,7 @@ public class ReadCSV{
 			int returnVal = chooser.showOpenDialog(chooser);
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				br = new BufferedReader(new FileReader(chooser.getSelectedFile()));
+			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
